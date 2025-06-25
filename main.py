@@ -31,7 +31,6 @@ class File_name_editor_app(QtWidgets.QWidget):
             self.label.setText("nazwa nie może być pusta")
             return
 
-
         file_directory = str(QFileDialog.getExistingDirectory(self, "Wybierz odpowiedni folder"))
         self.label.setText(file_directory)
 
@@ -46,7 +45,7 @@ class File_name_editor_app(QtWidgets.QWidget):
             return 
         counter = 0
         for file_name in files:
-            os.rename(os.path.abspath(file_name), f"{os.path.abspath(file_name)}{counter}")
+            #os.rename(os.path.abspath(file_name), f"{os.path.abspath(file_name)}{counter}")
             counter += 1
             
 
